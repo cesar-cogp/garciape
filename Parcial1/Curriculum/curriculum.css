@@ -1,0 +1,41 @@
+#contenedor {
+    width: 21.59cm;
+    height: 27.94cm;
+    padding: 1cm;
+    font-family:'Segoe UI';
+    font-size: 1rem;
+}
+#pic{
+    width: 200px;
+    padding: 5px;
+    border: black 2px solid;
+}
+#personal{
+    box-sizing: content-box;
+    float:left;
+    width:35%;
+}
+#personal #personaltop{
+    background-color: goldenrod;
+    border: 1px solid goldenrod;
+    padding-left: 4mm;
+    height: 12.97cm;
+}
+#personal #personalbottom{
+    background-color:linen;
+    border: 1px solid linen;
+    padding-left: 4mm;
+    height: 15.60cm;
+}
+#laboral {
+    background-color: black;
+    border: 1px solid black;
+    color:white;
+    padding-left: 4mm;
+    float: left;
+    width:55%;
+}
+td{
+    vertical-align: top;
+    border: 1px solid white;
+}
