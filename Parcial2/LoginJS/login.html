@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href=""/>
+        <title>Login JSolution</title>
+        
+        <link rel="stylesheet" href="./resources/bootstrap/css/bootstrap.min.css"/>
+        <script src="./resources/jquery/jquery-1.11.3.min.js"></script>
+        <script src="./resources/bootstrap/js/bootstrap.min.js"></script>
+        <script src="./js/login.js"></script>
+
+        <link rel="stylesheet" href="./css/login.css">
+        <link rel='stylesheet' href='./css/ModalHeaderColor.css'/>
+
+    </head>
+    <body>
+        <!-- Modal -->
+        <div class="modal fade" id="miModal" tabindex="-1" aria-labelledby="miModalLabel" aria-hidden="true" role="dialog">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h2 class="modal-title text-center" id="miModalLabel">Acceso</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body text-center">
+                <h3>Mensaje</h3>
+                </div>
+                <div class="modal-footer">
+                <button type="button" id="botonCerrar" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- Login -->
+        <div class="login">
+            <div class="login-screen">
+                <div class="app-title">
+                    <h1>JSolution</h1>
+                </div>
+    
+                <div class="login-form">
+                    <div class="control-group">
+                    <input type="text" class="login-field" value="" placeholder="Usuario o correo" id="login-name">
+                    <label class="login-field-icon fui-user" for="login-name"></label>
+                    </div>
+    
+                    <div class="control-group">
+                    <input type="password" class="login-field" value="" placeholder="Contraseña" id="login-pass">
+                    <label class="login-field-icon fui-lock" for="login-pass"></label>
+                    </div>
+    
+                    <a class="btn btn-primary btn-large btn-block" id="botonAceptar">Iniciar sesión <span class="glyphicon glyphicon-log-in"></span></a>
+                    <a class="login-link" href="#">¿Olvidaste tu contraseña?</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
