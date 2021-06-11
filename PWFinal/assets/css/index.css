@@ -1,0 +1,35 @@
+body {
+    display:flex;
+    min-height: 100vh;
+    flex-direction:column;
+  } 
+  
+  main {
+    flex: 1 0 auto;
+  }
+  
+  h1.title,
+  .footer-copyright a {
+    font-family: 'Architects Daughter', cursive;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+    
+  body.welcome {
+    background: #371c79;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+    
+  .welcome #welcome {
+    background: #4398e9 ;
+    width: 56px;
+    height: 56px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    overflow: hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
