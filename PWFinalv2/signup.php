@@ -49,7 +49,7 @@
         <div class="container">
             <main>
                 <div class="py-5 text-center">
-                    <img class="d-block mx-auto mb-4" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+                    <a title="Accesorios Trevino" href="index.php"><img class="mb-4" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"></a>
                     <h2>Nuevo usuario</h2>
                     <p class="lead">Nos alegra que te registres con nosotros. Al registrarse con nosotros tendras la posibilidad de realizar pedidos de mercancia. Además de otros beneficios.</p>
                 </div>

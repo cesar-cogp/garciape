@@ -49,7 +49,7 @@
 
         <main class="form-signin">
             <form action="php/login.php" method="POST" class="needs-validation" novalidate>
-                <img class="mb-4" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+                <a title="Accesorios Trevino" href="index.php"><img class="mb-4" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"></a>
                 <h1 class="h3 mb-3 fw-normal">Vamos, Inicia sesión</h1>
 
                 <div class="form-floating text-dark">
