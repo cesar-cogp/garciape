@@ -13,6 +13,7 @@
             while($row = $statement->fetch())
                 {
                     $data[] = $row;
+                    //var_dump($row);
                 }
 
             echo json_encode($data);

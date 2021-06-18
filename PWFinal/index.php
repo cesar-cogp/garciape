@@ -70,87 +70,85 @@
                 <!-- ADD TASK FORM -->
                 <div class="card card-body">
                     <form action="save_merch.php" method="POST">
-                    <div class="form-group">
-                        <input type="text" name="tipo" class="form-control" placeholder="Tipo de accesorio" autofocus>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="marca" class="form-control" placeholder="Marca a la que pertenece" >
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="modelo" class="form-control" placeholder="Modelo que le corresponde" >
-                    </div>
-                    <div class="form-group">
-                        <textarea name="descripcion" rows="2" class="form-control" placeholder="Descripcion del accesorio"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <input type="number" name="cantidad" class="form-control" placeholder="Cantidad en existencia" >
-                    </div>
-                    <div class="form-group">
-                        <input type="number" name="costo_unitario" class="form-control" placeholder="Precio de compra (unitario)" >
-                    </div>
-                    <div class="form-group">
-                        <input type="number" name="precio_unitario" class="form-control" placeholder="Precio de venta (unitario)" >
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="estatus" class="form-control" placeholder="¿En existencia?" >
-                    </div>
-                    <input type="submit" name="save_merch" class="btn btn-success btn-block" value="Guardar accesorio">
+                        <div class="form-group">
+                            <input type="text" name="tipo" class="form-control" placeholder="Tipo de accesorio" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="marca" class="form-control" placeholder="Marca a la que pertenece" >
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="modelo" class="form-control" placeholder="Modelo que le corresponde" >
+                        </div>
+                        <div class="form-group">
+                            <textarea name="descripcion" rows="2" class="form-control" placeholder="Descripcion del accesorio"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" name="cantidad" class="form-control" placeholder="Cantidad en existencia" >
+                        </div>
+                        <div class="form-group">
+                            <input type="number" name="costo_unitario" class="form-control" placeholder="Precio de compra (unitario)" >
+                        </div>
+                        <div class="form-group">
+                            <input type="number" name="precio_unitario" class="form-control" placeholder="Precio de venta (unitario)" >
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="estatus" class="form-control" placeholder="¿En existencia?" >
+                        </div>
+                        <input type="submit" name="save_merch" class="btn btn-success btn-block" value="Guardar accesorio">
                     </form>
                 </div>
-                </div>
+            </div>
                 <div class="col-md-8">
                     <div class="table-responsive">
-                    <table class="table table-dark table-hover">
-                    <thead>
-                    <tr>
-                        <th>Codigo</th>
-                        <th>Tipo</th>
-                        <th>Marca</th>
-                        <th>Modelo</th>
-                        <th>Descripcion</th>
-                        <th>Cantidad</th>
-                        <th>Costo unitario</th>
-                        <th>Precio unitario</th>
-                        <th>Estatus</th>
-                        <th>Acciones</th>
-                    </tr>
-                    </thead>
-                    <tbody>
+                        <table class="table table-dark table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Codigo</th>
+                                    <th>Tipo</th>
+                                    <th>Marca</th>
+                                    <th>Modelo</th>
+                                    <th>Descripcion</th>
+                                    <th>Cantidad</th>
+                                    <th>Costo unitario</th>
+                                    <th>Precio unitario</th>
+                                    <th>Estatus</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
 
-                    <?php
-                    $query = "select * from mercancia";
-                    $statement = $conn->prepare($query);
-                    $statement -> setFetchMode(PDO::FETCH_ASSOC);
-            
-                    if($statement->execute()){
-                        while($row = $statement->fetch()){ ?>
-                    <tr>
-                        <td><?php echo $row['codigo']; ?></td>
-                        <td><?php echo $row['tipo']; ?></td>
-                        <td><?php echo $row['marca']; ?></td>
-                        <td><?php echo $row['modelo']; ?></td>
-                        <td><?php echo $row['descripcion']; ?></td>
-                        <td><?php echo $row['cantidad']; ?></td>
-                        <td><?php echo $row['costo_unitario']; ?></td>
-                        <td><?php echo $row['precio_unitario']; ?></td>
-                        <td><?php echo $row['estatus']; ?></td>
-                        <td>
-                        <a href="edit_merch.php?codigo=<?php echo $row['codigo']?>" class="btn btn-secondary">
-                            <i class="fas fa-marker"></i>
-                        </a>
-                        <a href="delete_merch.php?codigo=<?php echo $row['codigo']?>" class="btn btn-danger">
-                            <i class="far fa-trash-alt"></i>
-                        </a>
-                        </td>
-                    </tr>
-                    <?php } }?>
-                    </tbody>
-                </table>
-
-
+                                <?php
+                                $query = "select * from mercancia";
+                                $statement = $conn->prepare($query);
+                                $statement -> setFetchMode(PDO::FETCH_ASSOC);
+                        
+                                if($statement->execute()){
+                                    while($row = $statement->fetch()){ ?>
+                                <tr>
+                                    <td><?php echo $row['codigo']; ?></td>
+                                    <td><?php echo $row['tipo']; ?></td>
+                                    <td><?php echo $row['marca']; ?></td>
+                                    <td><?php echo $row['modelo']; ?></td>
+                                    <td><?php echo $row['descripcion']; ?></td>
+                                    <td><?php echo $row['cantidad']; ?></td>
+                                    <td><?php echo $row['costo_unitario']; ?></td>
+                                    <td><?php echo $row['precio_unitario']; ?></td>
+                                    <td><?php echo $row['estatus']; ?></td>
+                                    <td>
+                                    <a href="edit_merch.php?codigo=<?php echo $row['codigo']?>" class="btn btn-secondary">
+                                        <i class="fas fa-marker"></i>
+                                    </a>
+                                    <a href="delete_merch.php?codigo=<?php echo $row['codigo']?>" class="btn btn-danger">
+                                        <i class="far fa-trash-alt"></i>
+                                    </a>
+                                    </td>
+                                </tr>
+                                <?php } }?>
+                            </tbody>
+                        </table>
                     </div>
             </div>
-            </div>
+        </div>
                         </div>
 
 

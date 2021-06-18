@@ -74,34 +74,34 @@ if (isset($_POST['update'])) {
   <div class="row">
     <div class="col-md-4 mx-auto">
         <div class="card card-body">
-        <form action="edit_merch.php?codigo=<?php echo $_GET['codigo']; ?>" method="POST">
-        <div class="form-group">
-            <input type="text" name="tipo" class="form-control" value="<?php echo $tipo; ?>" placeholder="Tipo de accesorio" >
+            <form action="edit_merch.php?codigo=<?php echo $_GET['codigo']; ?>" method="POST">
+                <div class="form-group">
+                    <input type="text" name="tipo" class="form-control" value="<?php echo $tipo; ?>" placeholder="Tipo de accesorio" >
+                </div>
+                <div class="form-group">
+                    <input type="text" name="marca" class="form-control" value="<?php echo $marca; ?>" placeholder="Marca a la que pertenece" >
+                </div>
+                <div class="form-group">
+                    <input type="text" name="modelo" class="form-control" value="<?php echo $modelo; ?>" placeholder="Modelo que le corresponde" >
+                </div>
+                <div class="form-group">
+                    <textarea name="descripcion" rows="2" class="form-control"  placeholder="Descripcion del accesorio"><?php echo $descripcion; ?></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="number" name="cantidad" class="form-control" value="<?php echo $cantidad; ?>" placeholder="Cantidad en existencia" >
+                </div>
+                <div class="form-group">
+                    <input type="number" name="costo_unitario" class="form-control" value="<?php echo $costo_unit; ?>" placeholder="Precio de compra (unitario)" >
+                </div>
+                <div class="form-group">
+                    <input type="number" name="precio_unitario" class="form-control" value="<?php echo $precio_unit; ?>" placeholder="Precio de venta (unitario)" >
+                </div>
+                <div class="form-group">
+                    <input type="text" name="estatus" class="form-control" value="<?php echo $estatus; ?>" placeholder="¿En existencia?" >
+                </div>
+                <button class="btn-success" name="update">Actualizar</button>
+            </form>
         </div>
-        <div class="form-group">
-            <input type="text" name="marca" class="form-control" value="<?php echo $marca; ?>" placeholder="Marca a la que pertenece" >
-        </div>
-        <div class="form-group">
-            <input type="text" name="modelo" class="form-control" value="<?php echo $modelo; ?>" placeholder="Modelo que le corresponde" >
-        </div>
-        <div class="form-group">
-            <textarea name="descripcion" rows="2" class="form-control"  placeholder="Descripcion del accesorio"><?php echo $descripcion; ?></textarea>
-        </div>
-        <div class="form-group">
-            <input type="number" name="cantidad" class="form-control" value="<?php echo $cantidad; ?>" placeholder="Cantidad en existencia" >
-        </div>
-        <div class="form-group">
-            <input type="number" name="costo_unitario" class="form-control" value="<?php echo $costo_unit; ?>" placeholder="Precio de compra (unitario)" >
-        </div>
-        <div class="form-group">
-            <input type="number" name="precio_unitario" class="form-control" value="<?php echo $precio_unit; ?>" placeholder="Precio de venta (unitario)" >
-        </div>
-        <div class="form-group">
-            <input type="text" name="estatus" class="form-control" value="<?php echo $estatus; ?>" placeholder="¿En existencia?" >
-        </div>
-        <button class="btn-success" name="update">Actualizar</button>
-      </form>
-      </div>
     </div>
   </div>
 </div>
